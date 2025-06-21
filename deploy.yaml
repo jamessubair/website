@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-deployment
+  name: devopsevaluationquiz-deployment
   labels:
-    app: my-deployment
+    app: devopsevaluationquiz-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-deployment
+      app: devopsevaluationquiz-deployment
   template:
     metadata:
       labels:
-        app: my-deployment
+        app: devopsevaluationquiz-deployment
     spec:
       containers:
-      - name: my-deployment
+      - name: devopsevaluationquiz-deployment
         image: jamessubair/project2
         ports:
         - containerPort: 85
