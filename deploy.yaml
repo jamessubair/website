@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devopsevaluationquiz-deployment
+  name: zendrix-deployment
   labels:
-    app: devopsevaluationquiz-deployment
+    app: zendrix
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: devopsevaluationquiz-deployment
+      app: zendrix
   template:
     metadata:
       labels:
-        app: devopsevaluationquiz-deployment
+        app: zendrix
     spec:
       containers:
-      - name: devopsevaluationquiz-deployment
-        image: jamessubair/project2
+      - name: zendrix
+        image: jamessubair/zendrix-app
         ports:
         - containerPort: 85
